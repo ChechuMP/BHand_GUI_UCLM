@@ -13,18 +13,18 @@ catkin_package()
 
 include_directories(
   usr/include
-  /home/jesus/BHand/API
-  /home/jesus/BHand/thirdparty/include
-  /home/jesus/BHand/thirdparty/peak-linux-driver-7.14/driver
-  /home/jesus/BHand/thirdparty/sources/ctb-0.14/include
-  /home/jesus/BHand/thirdparty/sources/poco-1.3.6p2/Foundation/include
+  /home/<user>/BHand/API
+  /home/<user>/BHand/thirdparty/include
+  /home/<user>/BHand/thirdparty/peak-linux-driver-7.14/driver
+  /home/<user>/BHand/thirdparty/sources/ctb-0.14/include
+  /home/<user>/BHand/thirdparty/sources/poco-1.3.6p2/Foundation/include
   ${catkin_INCLUDE_DIRS}
 )
 
 add_executable(bhand_server bhand_server.cpp)
 target_link_libraries(bhand_server
-  /home/jesus/BHand/API/lib/libBHand.a 
-  /home/jesus/BHand/thirdparty/peak-linux-driver-7.14/lib/libpcan.so 
+  /home/<user>/BHand/API/lib/libBHand.a 
+  /home/<user>/BHand/thirdparty/peak-linux-driver-7.14/lib/libpcan.so 
   /usr/local/lib/libctb-barrett-0.14.so
   /usr/local/lib/libPocoFoundationBarrett.so
   ${catkin_LIBRARIES}
