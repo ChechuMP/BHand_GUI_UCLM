@@ -1,2 +1,5 @@
 # BHand_GUI_UCLM
-This repository provides tools to control and simulate the robotic hand Barrett Hand on ROS
+
+UNDER CONSTRUCTION
+
+This repository provides tools to control and simulate the robotic hand Barrett Hand BH8-280 on ROS.
