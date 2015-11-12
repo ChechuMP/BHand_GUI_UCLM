@@ -1,0 +1,8 @@
+int64 bh_finger_1_position
+int64 bh_finger_2_position
+int64 bh_finger_3_position
+int64 bh_spread_position
+int64 bh_finger_1_velocity
+int64 bh_finger_2_velocity
+int64 bh_finger_3_velocity
+int64 bh_spread_velocity

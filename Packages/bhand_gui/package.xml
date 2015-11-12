@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>bhand_gui</name>
+  <version>0.0.0</version>
+  <description>The bhand_gui package</description>
+  <maintainer email="jmpmn1992@gmail.com">Jesús Martín - Pozuelo</maintainer>
+  <license>GPL</license>
+  <author email="jmpmn1992@gmail.com">Jesús Martín - Pozuelo</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rqt_gui</build_depend>
+  <build_depend>rqt_gui_cpp</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>genmsg</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rqt_gui</run_depend>
+  <run_depend>rqt_gui_cpp</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>genmsg</run_depend>
+  <run_depend>message_generation</run_depend>
+
+  <export>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+  </export>
+</package>
