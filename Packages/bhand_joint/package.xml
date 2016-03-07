@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>bhand_joint</name>
+  <version>0.0.0</version>
+  <description>The bhand_joint package</description>
+  <maintainer email="jmpmn1992@gmail.com">Jesús Martín - Pozuelo</maintainer>
+  <license>GPL</license>
+  <author email="jmpmn1992@gmail.com">Jesús Martín - Pozuelo</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>genmsg</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>bhand_gui</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>genmsg</run_depend>
+  <run_depend>message_generation</run_depend>
+  <run_depend>bhand_gui</run_depend>
+
+</package>

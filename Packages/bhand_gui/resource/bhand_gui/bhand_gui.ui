@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyGuiWidget</class>
+ <widget class="QWidget" name="MyGuiWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>525</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BHAND GUI</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidgetControlMode">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>175</y>
+     <width>475</width>
+     <height>325</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tab_1">
+    <attribute name="title">
+     <string>Control Position</string>
+    </attribute>
+    <widget class="QSlider" name="finger_1_position_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>244</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="finger_2_position_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>244</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="finger_3_position_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>150</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>244</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="spread_position_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>200</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>314</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_1_position">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>50</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finger 1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_2_position">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>100</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finger 2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_3_position">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>150</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finger 3</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_spread_position">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>200</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Spread</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_1_position">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>50</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_2_position">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>100</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_3_position">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>150</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_spread_position">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>200</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_1_position_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>50</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_2_position_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>100</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_3_position_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>150</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_spread_position_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>200</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_spread_position_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>200</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_3_position_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>150</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_2_position_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>100</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_1_position_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>50</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.00</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_desired_position">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>25</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Desired</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_real_position">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>25</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Real</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="move_all_fingers">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>250</y>
+       <width>150</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Move All Fingers</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Control Velocity</string>
+    </attribute>
+    <widget class="QSlider" name="finger_1_velocity_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>20</number>
+     </property>
+     <property name="maximum">
+      <number>244</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="finger_2_velocity_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>20</number>
+     </property>
+     <property name="maximum">
+      <number>244</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="finger_3_velocity_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>150</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>20</number>
+     </property>
+     <property name="maximum">
+      <number>244</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="spread_velocity_slider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>200</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>335</number>
+     </property>
+     <property name="maximum">
+      <number>1046</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_1_velocity">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>50</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finger 1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_2_velocity">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>100</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finger 2</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_3_velocity">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>150</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Finger 3</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_spread_velocity">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>200</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Spread</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_1_velocity">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>50</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.20</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_2_velocity">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>100</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.20</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_3_velocity">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>150</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.20</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_spread_velocity">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>200</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>3.35</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_1_velocity_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>50</y>
+       <width>40</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad/s</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_2_velocity_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>100</y>
+       <width>40</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad/s</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_finger_3_velocity_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>150</y>
+       <width>40</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad/s</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlabel_spread_velocity_rad">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>200</y>
+       <width>40</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>rad/s</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_3_velocity_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>150</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.20</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_2_velocity_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>100</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.20</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_spread_velocity_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>200</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>3.35</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="qlineedit_finger_1_velocity_real">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>50</y>
+       <width>45</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0.20</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_desired_velocity">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>25</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Desired</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_real_velocity">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>25</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Real</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="change_velocity_all_fingers">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>250</y>
+       <width>225</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Change Velocity All Fingers</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="startHand">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>50</y>
+     <width>100</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="text_command_history">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>50</y>
+     <width>350</width>
+     <height>100</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_command_history">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>25</y>
+     <width>150</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Command History</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stopHand">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>100</y>
+     <width>100</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

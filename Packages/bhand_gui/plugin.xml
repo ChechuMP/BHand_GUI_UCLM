@@ -1,0 +1,12 @@
+<library path="lib/libbhand_gui">
+  <class name="bhand_gui/BHAND" type="bhand_gui::BHAND" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      A CPP Gui plugin.
+    </description>
+    <qtgui>
+      <label>BHand Gui</label>
+      <icon type="theme">image-x-generic</icon>
+      <statustip>A BHand Gui plugin</statustip>
+    </qtgui>
+  </class>
+</library>

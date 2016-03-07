@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Se inicia el parámetro "robot_description" -->
+
+  <param name="robot_description"
+    command="$(find xacro)/xacro.py '$(find bhand_description)/urdf/bh.urdf.xacro'" />
+
+  <!-- Se ejecuta el nodo /bhand_joint -->
+
+  <node name="bhand_joint" pkg="bhand_joint" type="bhand_joint">
+  </node> 
+
+  <!-- Se ejecuta el nodo /robot_state_publisher -->
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/> 
+
+  <!-- Se inicia el entorno rqt con la configuración requerida -->
+
+  <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find bhand_description)/launch/bhand.perspective"/> 
+
+  <!-- Se ejecuta el nodo /bhand_server -->
+
+  <node name="bhand_server" pkg="bhand_server" type="bhand_server"/> 
+
+</launch>
+
